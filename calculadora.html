@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+ <title>Calculadora</title>
+ 
+<script>
+
+function calcula(operacion) {
+       var operando = document.getElementsByTagName("input");
+   
+    var result = eval(operando[0].value + operacion + operando[1].value);
+    document.calc.resultado.value = result;
+}
+</script>
+
+ 
+</head>
+
+<body>
+
+<h1>Calculadora</h1>
+<br>
+
+<form name="calc">
+<input type="Text" id="numero1" name="operando1" value="0" size="12">
+<br>
+<input type="Text" id="numero2" name="operando2" value="0" size="12">
+<br>
+<input type="Button" name="" value=" + " onclick="calcula('+')">
+<input type="Button" name="" value=" - " onclick="calcula('-')">
+<input type="Button" name="" value=" X " onclick="calcula('*')">
+<input type="Button" name="" value=" / " onclick="calcula('/')">
+<br>
+<input type="Text" name="resultado" value="0" size="12">
+<input type="reset" value="C">
+</form>
+
+
+</body>
+</html>
